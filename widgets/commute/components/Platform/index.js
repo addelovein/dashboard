@@ -5,6 +5,10 @@ import Panel from './../Panel';
 import Marquee from './../Marquee';
 
 const Platform = ({ width, height, data, top }) => {
+  if (!data) {
+    return null;
+  }
+
   const next = data[0];
   const rest = data.slice(1);
 
